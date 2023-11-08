@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="description" content="단국대학교 23-2 게임프로그래밍 4B">
+    <meta name="author" content="32210718 김성민">
+
+    <title>빨간색 웹게임</title>
+    <!-- phaser 프레임워크 -->
+    <script src="js/phaser.min.js"></script>
+    <script src="js/airwar/boot.js"></script>
+    <script src="js/airwar/preloader.js"></script>
+    <script src="js/airwar/mainMenu.js"></script>
+    <script src="js/airwar/game.js"></script>
+    <script src="js/airwar/game2.js"></script>
+    <script src="js/airwar/app.js"></script>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- includeHTML -->
+    <script src="js/includeHTML.js"></script>
+
+    <!-- Custom CSS -->
+    <style>
+        body {
+            padding-top: 70px;
+        }
+    
+        /* 모바일 기기 대응을 위한 CSS */
+        @media (max-width: 768px) {
+            body {
+                padding-top: 20px;
+            }
+            #gameContainer {
+                width: 100%; /* 게임 컨테이너가 모바일 화면에 맞게 조정 */
+                height: auto; /* 높이가 자동으로 조정되도록 설정 */
+            }
+            /* 추가적인 모바일 최적화 스타일 */
+        }
+    
+        /* 가로모드 사용을 강제하는 스타일 */
+        @media (orientation: portrait) {
+            body::after {
+                content: '가로 모드로 전환해 주세요.';
+                color: white;
+                position: fixed;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                background-color: rgba(0,0,0,0.8);
+                padding: 10px;
+                border-radius: 5px;
+            }
+    
+            /* 가로 모드가 아닐 때 게임 컨텐츠를 숨김 처리 */
+            #gameContainer, .container {
+                display: none;
+            }
+        }
+        </style>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+    <!-- Navigation -->
+    <div include-html="navbar.html"></div>
+    <script>includeHTML();</script>
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h1>Pilot SOL</h1>
+                <h5>PC 최적화 게임</h5>
+                <h6>Z : 총알 발사 B: 지원 요청</h6>
+                <h6>아이템: 파워업, 별, 다이아몬드</h6>
+                <h6>승리조건: 1탄: 10만점, 2탄: 30만점</h6>
+            </div>
+        </div>
+        <div class="row">
+            <hr>
+            <div id="gameContainer" class="center-block"></div>
+            <script>
+                console.log("요소 1. 각종 효과음 추가");
+                console.log("요소 2. 적기 무한 랜덤 생성");
+                console.log("요소 3. 총알up 아이템 추가");
+                console.log("요소 4. 플레이어 생명 추가");
+                console.log("요소 5. 적기 생명 추가");
+                console.log("요소 6. 다양한 적기 추가");
+                console.log("요소 7. 점수 아이템 추가"); //별, 다이아몬드
+                console.log("요소 8. 적기 총알 추가");
+                console.log("요소 9. 플레이어 궁극기 추가");
+                console.log("요소 10. 스테이지2 추가");
+            </script>
+        </div>
+        <!-- /.row -->
+        <hr>
+    </div>
+    <!-- /.container -->
+
+     <!-- jQuery Version 1.11.1 -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>
